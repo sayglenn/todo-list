@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Libre Franklin"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <script src="main.js"></script>
-</body>
+    <div class="dashboard">
+      <div class="header">
+        <p class="header-label">To-Do List</p>
+        <img src="images/task.png" alt="task" class="header-image" />
+        <p class="header-welcome">Welcome Back, User</p>
+      </div>
+      <div class="content">
+        <div class="menu">
+          <button class="main-button" id="home">Home</button>
+          <button class="main-button" id="today">Today</button>
+          <p class="project-header">Projects</p>
+          <div class="projects">
+            <button class="project-button">Gym</button>
+            <button class="project-button">Work</button>
+          </div>
+          <div class="button-container">
+            <button class="add">+</button>
+          </div>
+        </div>
+        <div class="display">
+          <div class="todo-card">
+            <p class="task-title">Buy Food</p>
+            <button class="card-options">
+              <img src="images/check.svg" alt="done" />
+            </button>
+            <button class="card-options">
+              <img src="images/information.svg" alt="info" />
+            </button>
+            <button class="card-options">
+              <img src="images/circle-edit-outline.svg" alt="edit" />
+            </button>
+            <button class="card-options">
+              <img src="images/trash-can.svg" alt="delete" />
+            </button>
+          </div>
+        </div>
+        <div class="modal-add active">
+          <h3>Create New...</h3>
+          <div class="form-area">
+            <div class="new">
+              <button class="form-button">To-Do</button>
+              <button class="form-button">Project</button>
+            </div>
+            <div class="creator">
+              <form class="todo-form">
+                <input
+                  class="input"
+                  type="text"
+                  id="title"
+                  placeholder="Title"
+                  maxlength="100"
+                  required
+                />
+                <input
+                  class="input"
+                  type="text"
+                  id="description"
+                  placeholder="Description"
+                  maxlength="100"
+                  required
+                />
+                <input
+                  class="input"
+                  type="number"
+                  id="pages"
+                  placeholder="Pages"
+                  max="10000"
+                  required
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="overlay active"></div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,240 @@
+body {
+  background-image: url("images/wavy.jpg");
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.dashboard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1150px;
+  height: 625px;
+  border-radius: 50px;
+  background-color: rgb(202, 202, 202);
+  border: solid 2px;
+}
+
+.header {
+  display: flex;
+  height: 50px;
+  padding: 20px 40px;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+.header-label,
+.header-welcome {
+  font-size: 24px;
+  margin-top: 16px;
+  width: 235px;
+  height: 40px;
+  margin-bottom: 0;
+  font-weight: 900;
+}
+
+.header-image {
+  height: 70px;
+}
+
+.content {
+  height: 533px;
+  display: flex;
+}
+
+.menu {
+  width: 340px;
+  background-color: rgb(177, 255, 204);
+  border-bottom-left-radius: 50px;
+  border-right: 2px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.main-button {
+  background: none;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 350px;
+  overflow-y: auto;
+  gap: 5px;
+}
+
+.project-header {
+  font-size: 30px;
+  padding: 10px;
+  margin: 12px 0px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.project-button {
+  background: none;
+  font-size: 24px;
+  border: none;
+  padding: 5px;
+}
+
+.add {
+  background: none;
+  font-size: 36px;
+  padding: 10px;
+  border: none;
+  margin-left: 130px;
+  height: 70px;
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+.project-button:hover,
+.main-button:hover,
+.add:hover {
+  transform: translateY(4px);
+  background-color: rgb(114, 249, 161);
+  border: solid 2px;
+  box-shadow: 0 4px #999;
+}
+
+.add:hover {
+  border-radius: 50%;
+}
+
+.project-button:active,
+.main-button:active,
+.add:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px #999;
+}
+
+.display {
+  background-color: rgb(185, 227, 255);
+  width: 808px;
+  border-bottom-right-radius: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.todo-card {
+  display: flex;
+  height: 65px;
+  background-color: white;
+  padding: 0px 20px;
+  gap: 30px;
+  align-items: center;
+}
+
+.card-options {
+  margin-top: 10px;
+  width: 35px;
+  height: 35px;
+  background: none;
+  border: none;
+}
+
+.task-title {
+  font-weight: bold;
+  flex: 1;
+}
+
+.todo-card:hover {
+  transform: translateY(-6px);
+  transition-duration: 200ms;
+  box-shadow: 0 6px #afafaf;
+}
+
+.card-options:hover {
+  transform: translateY(2px);
+  border: solid 1px;
+  box-shadow: 0 2px #999;
+}
+
+.card-options:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px #999;
+}
+
+.modal-add {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 100ms ease-in-out scale(0);
+  border: 2px solid;
+  background-color: white;
+  z-index: 10;
+  width: 700px;
+  height: 500px;
+}
+
+.modal-add.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay {
+  position: fixed;
+  opacity: 0;
+  background-color: rgb(0, 0, 0, 0.5);
+  transition: 100ms ease-in-out;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
+.overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+h3 {
+  background-color: rgb(172, 255, 255);
+  padding: 20px;
+  font-size: 24px;
+  margin: 0;
+}
+
+.form-area {
+  display: flex;
+}
+
+.new {
+  width: 200px;
+  border-right: 2px solid;
+  height: 391px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0px;
+}
+
+.form-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  padding: 10px 0px;
+}
+
+.form-button:hover {
+  transform: translateY(4px);
+  box-shadow: 0 4px #999;
+  border: 2px solid;
+}
+
+.form-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px #999;
+}
